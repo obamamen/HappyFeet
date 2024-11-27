@@ -1,0 +1,28 @@
+[gd_scene load_steps=8 format=3 uid="uid://cj1vvl045l5i1"]
+
+[ext_resource type="PackedScene" uid="uid://2kqb2fqan5nr" path="res://Input.tscn" id="1_qgp4d"]
+[ext_resource type="Texture2D" uid="uid://cm5udctaimbye" path="res://Media/Arrows2/tile018.png" id="2_g03j6"]
+[ext_resource type="Texture2D" uid="uid://bmatlfh1ni11r" path="res://Media/Arrows2/tile026.png" id="3_pppl4"]
+[ext_resource type="Texture2D" uid="uid://cghl6a0t0sd4p" path="res://Media/Arrows2/tile019.png" id="4_21208"]
+[ext_resource type="Texture2D" uid="uid://ckjxnwtr318hw" path="res://Media/Arrows2/tile023.png" id="5_hp7dt"]
+[ext_resource type="Texture2D" uid="uid://bribxpjsrfgr5" path="res://Media/Arrows2/tile016.png" id="6_n6rsm"]
+[ext_resource type="Texture2D" uid="uid://dw8ti3txlx72d" path="res://Media/Arrows2/tile024.png" id="7_aagof"]
+
+[node name="Root" type="Node2D"]
+
+[node name="MainCamera" type="Camera2D" parent="."]
+zoom = Vector2(1.2, 1.2)
+
+[node name="InputUp" parent="." instance=ExtResource("1_qgp4d")]
+Standard = ExtResource("2_g03j6")
+Pressed = ExtResource("3_pppl4")
+
+[node name="InputRight" parent="." instance=ExtResource("1_qgp4d")]
+position = Vector2(64, 64)
+Standard = ExtResource("4_21208")
+Pressed = ExtResource("5_hp7dt")
+
+[node name="InputLeft" parent="." instance=ExtResource("1_qgp4d")]
+position = Vector2(-64, 64)
+Standard = ExtResource("6_n6rsm")
+Pressed = ExtResource("7_aagof")
