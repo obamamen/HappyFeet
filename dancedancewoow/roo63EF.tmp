@@ -7,38 +7,43 @@
 [ext_resource type="Texture2D" uid="uid://ckjxnwtr318hw" path="res://Media/Arrows2/tile023.png" id="5_hp7dt"]
 [ext_resource type="Texture2D" uid="uid://bribxpjsrfgr5" path="res://Media/Arrows2/tile016.png" id="6_n6rsm"]
 [ext_resource type="Texture2D" uid="uid://dw8ti3txlx72d" path="res://Media/Arrows2/tile024.png" id="7_aagof"]
-[ext_resource type="PackedScene" uid="uid://d1owipg7rfq76" path="res://spawners.tscn" id="8_dhxax"]
+[ext_resource type="PackedScene" uid="uid://djxuog6ik3txf" path="res://Arrow.tscn" id="8_pw4wg"]
 [ext_resource type="Script" path="res://kill.gd" id="9_7vfmv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_utbvl"]
-radius = 30.0
+radius = 25.0
 
 [node name="Root" type="Node2D"]
 
 [node name="MainCamera" type="Camera2D" parent="."]
 zoom = Vector2(1.2, 1.2)
 
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="InputUp" parent="Node2D" instance=ExtResource("1_qgp4d")]
+[node name="InputUp" parent="." instance=ExtResource("1_qgp4d")]
 Standard = ExtResource("2_g03j6")
 Pressed = ExtResource("3_pppl4")
 
-[node name="InputRight" parent="Node2D" instance=ExtResource("1_qgp4d")]
+[node name="InputRight" parent="." instance=ExtResource("1_qgp4d")]
 position = Vector2(64, 64)
 Standard = ExtResource("4_21208")
 Pressed = ExtResource("5_hp7dt")
 InputKey = 1
 
-[node name="InputLeft" parent="Node2D" instance=ExtResource("1_qgp4d")]
+[node name="InputLeft" parent="." instance=ExtResource("1_qgp4d")]
 position = Vector2(-64, 64)
 Standard = ExtResource("6_n6rsm")
 Pressed = ExtResource("7_aagof")
 InputKey = 2
 
-[node name="Spawners" parent="." instance=ExtResource("8_dhxax")]
+[node name="Arrow" parent="." instance=ExtResource("8_pw4wg")]
+position = Vector2(-320, 64)
+
+[node name="Arrow2" parent="." instance=ExtResource("8_pw4wg")]
 position = Vector2(0, -256)
 rotation = 1.5708
+
+[node name="Arrow3" parent="." instance=ExtResource("8_pw4wg")]
+position = Vector2(320, 64)
+rotation = 3.14159
 
 [node name="Kill" type="Area2D" parent="."]
 position = Vector2(0, 64)

@@ -1,7 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1732700385
+::res://::1732706894
 icon.svg::CompressedTexture2D::2780556398229325278::1732699124::1732699131::1::::<><>::
-root.tscn::PackedScene::5459527957989292986::1732700385::0::1::::<><>::uid://c53po7n8juq1t::::res://Media/Arrows/tile000.png<>uid://col5pysxj8kqi::::res://Media/Arrows/tile001.png<>uid://c8c301uurtfqy::::res://Media/Arrows/tile002.png
+Input.tscn::PackedScene::1916717240027629291::1732706641::0::1::::<><>::res://input.gd
+input.gd::GDScript::-1::1732706632::0::1::::<>Node2D<>::
+Arrow.tscn::PackedScene::7839682036541975071::1732706656::0::1::::<><>::res://arrow.gd<>uid://7esxcc8m2mhe::::res://Media/Arrows2/tile007.png
+arrow.gd::GDScript::-1::1732706485::0::1::::<>Area2D<>::
+kill.gd::GDScript::-1::1732705061::0::1::::<>Area2D<>::
+global.gd::GDScript::-1::1732705918::0::1::::<>Node<>::
+root.tscn::PackedScene::5459527957989292986::1732706655::0::1::::<><>::uid://2kqb2fqan5nr::::res://Input.tscn<>uid://cm5udctaimbye::::res://Media/Arrows2/tile018.png<>uid://bmatlfh1ni11r::::res://Media/Arrows2/tile026.png<>uid://cghl6a0t0sd4p::::res://Media/Arrows2/tile019.png<>uid://ckjxnwtr318hw::::res://Media/Arrows2/tile023.png<>uid://bribxpjsrfgr5::::res://Media/Arrows2/tile016.png<>uid://dw8ti3txlx72d::::res://Media/Arrows2/tile024.png<>uid://djxuog6ik3txf::::res://Arrow.tscn<>res://kill.gd
+tile003.png::CompressedTexture2D::496519152819181267::1732706894::1732706894::1::::<><>::
 ::res://Media/::1732700509
 ::res://Media/Arrows/::1732700367
 tile000.png::CompressedTexture2D::6937246711988876375::1732700361::1732700367::1::::<><>::
@@ -36,7 +43,7 @@ tile028.png::CompressedTexture2D::4147652646910188531::1732700361::1732700367::1
 tile029.png::CompressedTexture2D::5546180766681281477::1732700361::1732700367::1::::<><>::
 tile030.png::CompressedTexture2D::2835127025246884974::1732700361::1732700367::1::::<><>::
 tile031.png::CompressedTexture2D::8790068289245693821::1732700361::1732700367::1::::<><>::
-::res://Media/Arrows2/::1732700543
+::res://Media/Arrows2/::1732700548
 tile000.png::CompressedTexture2D::2940192657641507522::1732700535::1732700548::1::::<><>::
 tile001.png::CompressedTexture2D::1343039487180540034::1732700535::1732700548::1::::<><>::
 tile002.png::CompressedTexture2D::7690923462651010721::1732700535::1732700548::1::::<><>::

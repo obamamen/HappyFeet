@@ -1,10 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://2kqb2fqan5nr"]
+[gd_scene load_steps=3 format=3 uid="uid://2kqb2fqan5nr"]
 
 [ext_resource type="Script" path="res://input.gd" id="1_m53jp"]
 
-[node name="Input" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_7m41r"]
+radius = 25.0
+
+[node name="Area2D" type="Area2D"]
 script = ExtResource("1_m53jp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7m41r")
 
 [node name="Standard" type="Sprite2D" parent="."]
 
 [node name="Pressed" type="Sprite2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -1,3 +1,9 @@
 res://root.tscn
 res://Input.tscn
 res://input.gd
+res://Arrow.tscn
+res://arrow.gd
+res://kill.gd
+res://global.gd
+res://spawners.tscn
+res://spawners.gd
