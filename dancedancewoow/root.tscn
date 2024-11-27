@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cj1vvl045l5i1"]
+[gd_scene load_steps=15 format=3 uid="uid://cj1vvl045l5i1"]
 
 [ext_resource type="PackedScene" uid="uid://2kqb2fqan5nr" path="res://Input.tscn" id="1_qgp4d"]
 [ext_resource type="Texture2D" uid="uid://cm5udctaimbye" path="res://Media/Arrows2/tile018.png" id="2_g03j6"]
@@ -9,9 +9,69 @@
 [ext_resource type="Texture2D" uid="uid://dw8ti3txlx72d" path="res://Media/Arrows2/tile024.png" id="7_aagof"]
 [ext_resource type="PackedScene" uid="uid://d1owipg7rfq76" path="res://spawners.tscn" id="8_dhxax"]
 [ext_resource type="Script" path="res://kill.gd" id="9_7vfmv"]
+[ext_resource type="Script" path="res://animator.gd" id="9_d2my3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_utbvl"]
 radius = 30.0
+
+[sub_resource type="Animation" id="Animation_uq5as"]
+resource_name = "basicTest"
+length = 5.0
+step = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("up")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"spawn"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("l")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"spawn"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_imf3b"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dujm6"]
+_data = {
+"RESET": SubResource("Animation_imf3b"),
+"basicTest": SubResource("Animation_uq5as")
+}
 
 [node name="Root" type="Node2D"]
 
@@ -19,6 +79,7 @@ radius = 30.0
 zoom = Vector2(1.2, 1.2)
 
 [node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, 128)
 
 [node name="InputUp" parent="Node2D" instance=ExtResource("1_qgp4d")]
 Standard = ExtResource("2_g03j6")
@@ -36,16 +97,32 @@ Standard = ExtResource("6_n6rsm")
 Pressed = ExtResource("7_aagof")
 InputKey = 2
 
-[node name="Spawners" parent="." instance=ExtResource("8_dhxax")]
-position = Vector2(0, -256)
-rotation = 1.5708
-
-[node name="Kill" type="Area2D" parent="."]
+[node name="Kill" type="Area2D" parent="Node2D"]
 position = Vector2(0, 64)
 script = ExtResource("9_7vfmv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Kill"]
 shape = SubResource("CircleShape2D_utbvl")
 debug_color = Color(0.987207, 0, 0.315499, 0.42)
 
-[connection signal="area_entered" from="Kill" to="Kill" method="_on_area_entered"]
+[node name="animator" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dujm6")
+}
+script = ExtResource("9_d2my3")
+
+[node name="r" parent="." instance=ExtResource("8_dhxax")]
+position = Vector2(512, 192)
+rotation = -3.14159
+timings = Array[float]([4.0, 0.4, 0.4, 0.2, 0.1])
+
+[node name="up" parent="." instance=ExtResource("8_dhxax")]
+position = Vector2(0, -320)
+rotation = 1.5708
+timings = Array[float]([2.0, 2.0, 2.0, 1.0, 1.0, 0.2])
+
+[node name="l" parent="." instance=ExtResource("8_dhxax")]
+position = Vector2(-512, 192)
+timings = Array[float]([0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.2, 0.2, 0.2, 0.2, 0.2])
+
+[connection signal="area_entered" from="Node2D/Kill" to="Node2D/Kill" method="_on_area_entered"]
