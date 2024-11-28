@@ -37,12 +37,20 @@ func _process(delta: float) -> void:
 		for area in areas:
 			area.queue_free()
 			var score = 0
+			var distance = global_position.distance_to(area.global_position)
 			score += (global_position.distance_to(area.global_position))
 			score = floor(score) * 20
 			score = clamp(score,0,600)
 			print(600 - score + 400)
 			
 			Global.score += (600 - score + 400)
+			if (distance < 5):
+				Global.setHitType(Global.hitType.Perfect,0.4)
+			elif (distance < 10):
+				Global.setHitType(Global.hitType.Great,0.8)
+			elif (distance < 15):
+				Global.setHitType(Global.hitType.Nice,1)
+
 	pass
 
 
