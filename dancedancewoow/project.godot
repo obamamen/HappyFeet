@@ -11,13 +11,23 @@ config_version=5
 [application]
 
 config/name="DanceDanceWoow"
+config/version="v1.1"
 run/main_scene="res://root.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.12993, 0.000176532, 0.225055, 1)
+boot_splash/show_image=false
+config/icon="res://Media/Miss-28-11-2024.png"
 
 [autoload]
 
 Global="*res://global.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 
 [input]
 

@@ -1,12 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://cj1vvl045l5i1"]
+[gd_scene load_steps=26 format=3 uid="uid://cj1vvl045l5i1"]
 
+[ext_resource type="Script" path="res://main_camera.gd" id="1_lytl4"]
 [ext_resource type="PackedScene" uid="uid://2kqb2fqan5nr" path="res://Input.tscn" id="1_qgp4d"]
-[ext_resource type="Texture2D" uid="uid://cm5udctaimbye" path="res://Media/Arrows2/tile018.png" id="2_g03j6"]
-[ext_resource type="Texture2D" uid="uid://bmatlfh1ni11r" path="res://Media/Arrows2/tile026.png" id="3_pppl4"]
 [ext_resource type="Texture2D" uid="uid://cghl6a0t0sd4p" path="res://Media/Arrows2/tile019.png" id="4_21208"]
 [ext_resource type="Texture2D" uid="uid://ckjxnwtr318hw" path="res://Media/Arrows2/tile023.png" id="5_hp7dt"]
-[ext_resource type="Texture2D" uid="uid://bribxpjsrfgr5" path="res://Media/Arrows2/tile016.png" id="6_n6rsm"]
-[ext_resource type="Texture2D" uid="uid://dw8ti3txlx72d" path="res://Media/Arrows2/tile024.png" id="7_aagof"]
 [ext_resource type="PackedScene" uid="uid://d1owipg7rfq76" path="res://spawners.tscn" id="8_dhxax"]
 [ext_resource type="Script" path="res://kill.gd" id="9_7vfmv"]
 [ext_resource type="Script" path="res://animator.gd" id="9_d2my3"]
@@ -18,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://dhemqnkfb13ie" path="res://Media/Great-28-11-2024.png" id="16_t366l"]
 [ext_resource type="Texture2D" uid="uid://gpxrb3q2t2jq" path="res://Media/Nice-28-11-2024.png" id="17_lc1kk"]
 [ext_resource type="Texture2D" uid="uid://cokykhqyw2sjb" path="res://Media/Miss-28-11-2024.png" id="19_8wyws"]
+[ext_resource type="Texture2D" uid="uid://dwmyyr0a6ktkm" path="res://Media/star.png" id="19_og51o"]
+[ext_resource type="Script" path="res://star.gd" id="20_4337u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_utbvl"]
 radius = 30.0
@@ -100,28 +99,45 @@ _data = {
 "basicTest": SubResource("Animation_uq5as")
 }
 
+[sub_resource type="Gradient" id="Gradient_lx6uk"]
+colors = PackedColorArray(0.137255, 0.109804, 0.188235, 1, 0.167399, 0.135758, 0.226209, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n5cq0"]
+gradient = SubResource("Gradient_lx6uk")
+fill_from = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_bw6iu"]
+colors = PackedColorArray(0, 0, 0, 0, 0.53445, 0.46374, 0.66482, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mdinc"]
+gradient = SubResource("Gradient_bw6iu")
+
 [node name="Root" type="Node2D"]
 
 [node name="MainCamera" type="Camera2D" parent="."]
-zoom = Vector2(1.2, 1.2)
+zoom = Vector2(1.6, 1.6)
+script = ExtResource("1_lytl4")
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(0, 64)
 
 [node name="InputUp" parent="Node2D" instance=ExtResource("1_qgp4d")]
-Standard = ExtResource("2_g03j6")
-Pressed = ExtResource("3_pppl4")
+rotation = -1.5708
+Standard = ExtResource("4_21208")
+Pressed = ExtResource("5_hp7dt")
 
 [node name="InputRight" parent="Node2D" instance=ExtResource("1_qgp4d")]
 position = Vector2(64, 64)
+rotation = -0.00715079
 Standard = ExtResource("4_21208")
 Pressed = ExtResource("5_hp7dt")
 InputKey = 1
 
 [node name="InputLeft" parent="Node2D" instance=ExtResource("1_qgp4d")]
 position = Vector2(-64, 64)
-Standard = ExtResource("6_n6rsm")
-Pressed = ExtResource("7_aagof")
+rotation = 3.14159
+Standard = ExtResource("4_21208")
+Pressed = ExtResource("5_hp7dt")
 InputKey = 2
 
 [node name="Kill" type="Area2D" parent="Node2D"]
@@ -133,19 +149,19 @@ shape = SubResource("CircleShape2D_utbvl")
 debug_color = Color(0.987207, 0, 0.315499, 0.42)
 
 [node name="r" parent="Node2D" instance=ExtResource("8_dhxax")]
-position = Vector2(512, 64)
-rotation = -3.14159
+position = Vector2(640, 64)
+rotation = 3.14159
 Standard = ExtResource("10_b3hg3")
 timings = Array[float]([4.0, 0.4, 0.4, 0.2, 0.1])
 
 [node name="up" parent="Node2D" instance=ExtResource("8_dhxax")]
-position = Vector2(0, -448)
+position = Vector2(0, -576)
 rotation = 1.5708
 Standard = ExtResource("11_r21b6")
 timings = Array[float]([2.0, 2.0, 2.0, 1.0, 1.0, 0.2])
 
 [node name="l" parent="Node2D" instance=ExtResource("8_dhxax")]
-position = Vector2(-512, 64)
+position = Vector2(-640, 64)
 Standard = ExtResource("12_4ni28")
 timings = Array[float]([0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.2, 0.2, 0.2, 0.2, 0.2])
 
@@ -164,34 +180,121 @@ offset_bottom = 40.0
 [node name="BgBottom" type="Sprite2D" parent="."]
 self_modulate = Color(0.262932, 0.262932, 0.262932, 1)
 z_index = -1
-scale = Vector2(2, 2)
+scale = Vector2(2.09777, 2)
 texture = ExtResource("11_pm6sa")
 
-[node name="Node2D2" type="Node2D" parent="."]
+[node name="texts" type="Node2D" parent="."]
 position = Vector2(-64, 192)
 scale = Vector2(0.3, 0.3)
 
-[node name="Miss" parent="Node2D2" instance=ExtResource("15_mwhad")]
-position = Vector2(853.333, 0)
+[node name="Miss" parent="texts" instance=ExtResource("15_mwhad")]
+position = Vector2(-213.333, 213.333)
 scale = Vector2(0.833333, 0.833333)
 texture = ExtResource("19_8wyws")
 type = 4
 
-[node name="Nice" parent="Node2D2" instance=ExtResource("15_mwhad")]
-position = Vector2(-853.333, -1280)
+[node name="Nice" parent="texts" instance=ExtResource("15_mwhad")]
+position = Vector2(-1280, -1280)
 scale = Vector2(0.833333, 0.833333)
 texture = ExtResource("17_lc1kk")
 type = 1
 
-[node name="Perfect" parent="Node2D2" instance=ExtResource("15_mwhad")]
-position = Vector2(1066.67, -1280)
+[node name="Perfect" parent="texts" instance=ExtResource("15_mwhad")]
+position = Vector2(1493.33, -1493.33)
 scale = Vector2(1.33333, 1.33333)
 type = 3
 
-[node name="Great" parent="Node2D2" instance=ExtResource("15_mwhad")]
-position = Vector2(1280, -853.333)
+[node name="Great" parent="texts" instance=ExtResource("15_mwhad")]
+position = Vector2(1706.67, -1066.67)
 scale = Vector2(1, 1)
 texture = ExtResource("16_t366l")
 type = 2
+
+[node name="stars" type="Node2D" parent="."]
+
+[node name="Star" type="Sprite2D" parent="stars"]
+top_level = true
+clip_children = 1
+z_index = -1
+position = Vector2(-448, -128)
+texture = ExtResource("19_og51o")
+script = ExtResource("20_4337u")
+speed = 12.0
+
+[node name="Sprite2D" type="Sprite2D" parent="stars/Star"]
+modulate = Color(1, 1, 1, 0.784314)
+scale = Vector2(10, 10)
+texture = SubResource("GradientTexture2D_n5cq0")
+
+[node name="Star2" type="Sprite2D" parent="stars"]
+top_level = true
+clip_children = 1
+z_index = -1
+position = Vector2(0, -256)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_og51o")
+script = ExtResource("20_4337u")
+speed = 18.0
+
+[node name="Sprite2D" type="Sprite2D" parent="stars/Star2"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(0, -128)
+scale = Vector2(10, 10)
+texture = SubResource("GradientTexture2D_n5cq0")
+
+[node name="Star3" type="Sprite2D" parent="stars"]
+top_level = true
+clip_children = 1
+z_index = -1
+position = Vector2(448, 64)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("19_og51o")
+script = ExtResource("20_4337u")
+speed = 8.0
+
+[node name="Sprite2D" type="Sprite2D" parent="stars/Star3"]
+modulate = Color(1, 1, 1, 0.784314)
+scale = Vector2(10, 10)
+texture = SubResource("GradientTexture2D_n5cq0")
+
+[node name="Star4" type="Sprite2D" parent="stars"]
+top_level = true
+clip_children = 1
+z_index = -1
+position = Vector2(-192, 320)
+texture = ExtResource("19_og51o")
+script = ExtResource("20_4337u")
+speed = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="stars/Star4"]
+modulate = Color(1, 1, 1, 0.784314)
+scale = Vector2(10, 10)
+texture = SubResource("GradientTexture2D_n5cq0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(512, 128)
+scale = Vector2(1.40625, 32)
+texture = SubResource("GradientTexture1D_mdinc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D2"]
+self_modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(436, 128)
+scale = Vector2(1.40625, 32)
+texture = SubResource("GradientTexture1D_mdinc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(-512, 128)
+rotation = 3.14159
+scale = Vector2(1.40625, 32)
+texture = SubResource("GradientTexture1D_mdinc")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(2.27374e-13, -256)
+rotation = 4.71239
+scale = Vector2(1.40625, 32)
+texture = SubResource("GradientTexture1D_mdinc")
 
 [connection signal="area_entered" from="Node2D/Kill" to="Node2D/Kill" method="_on_area_entered"]

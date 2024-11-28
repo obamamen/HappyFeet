@@ -15,4 +15,12 @@ shape = SubResource("CircleShape2D_7m41r")
 
 [node name="Pressed" type="Sprite2D" parent="."]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0980392)
+offset_top = -15.0
+offset_right = 1344.0
+offset_bottom = 79.0
+scale = Vector2(1, 0.32)
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

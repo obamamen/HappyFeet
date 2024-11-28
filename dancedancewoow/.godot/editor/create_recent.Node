@@ -1,6 +1,7 @@
+Sprite2D
+ColorRect
 Node2D
 AnimationPlayer
-Sprite2D
 RichTextLabel
 Control
 Container

@@ -44,11 +44,11 @@ func _process(delta: float) -> void:
 			print(600 - score + 400)
 			
 			Global.score += (600 - score + 400)
-			if (distance < 5):
+			if (distance < 8):
 				Global.setHitType(Global.hitType.Perfect,0.4)
-			elif (distance < 10):
+			elif (distance < 16):
 				Global.setHitType(Global.hitType.Great,0.8)
-			elif (distance < 15):
+			elif (distance < 24):
 				Global.setHitType(Global.hitType.Nice,1)
 
 	pass

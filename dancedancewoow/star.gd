@@ -1,6 +1,6 @@
-extends Area2D
+extends Sprite2D
 
-@export var speed: int = 350
+@export var speed: float = 20
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,6 +10,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position += transform.x * speed * delta
+	rotation_degrees += (speed * delta)
 	pass
-	
