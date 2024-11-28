@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cj1vvl045l5i1"]
+[gd_scene load_steps=21 format=3 uid="uid://cj1vvl045l5i1"]
 
 [ext_resource type="PackedScene" uid="uid://2kqb2fqan5nr" path="res://Input.tscn" id="1_qgp4d"]
 [ext_resource type="Texture2D" uid="uid://cm5udctaimbye" path="res://Media/Arrows2/tile018.png" id="2_g03j6"]
@@ -14,11 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://cv721riwut5s8" path="res://Media/bgBottom.png" id="11_pm6sa"]
 [ext_resource type="Texture2D" uid="uid://dd3ccdbv527e0" path="res://Media/Arrows/tile015.png" id="11_r21b6"]
 [ext_resource type="Texture2D" uid="uid://cpcv2lhvnish0" path="res://Media/Arrows/tile011.png" id="12_4ni28"]
-[ext_resource type="Texture2D" uid="uid://8obc55w60lx4" path="res://Media/Perfect-28-11-2024.png" id="13_ijfyu"]
 [ext_resource type="PackedScene" uid="uid://et0epngchynn" path="res://sprite_2d.tscn" id="15_mwhad"]
 [ext_resource type="Texture2D" uid="uid://dhemqnkfb13ie" path="res://Media/Great-28-11-2024.png" id="16_t366l"]
-[ext_resource type="Texture2D" uid="uid://gpxrb3q2t2jq" path="res://Media/Nice-28-11-2024.png" id="17_lc1kk"]
-[ext_resource type="Texture2D" uid="uid://cokykhqyw2sjb" path="res://Media/Miss-28-11-2024.png" id="19_8wyws"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_utbvl"]
 radius = 30.0
@@ -165,27 +162,12 @@ offset_bottom = 40.0
 [node name="BgBottom" type="Sprite2D" parent="."]
 self_modulate = Color(0.262932, 0.262932, 0.262932, 1)
 z_index = -1
+position = Vector2(64, -64)
 scale = Vector2(2, 2)
 texture = ExtResource("11_pm6sa")
 
 [node name="Sprite2D" parent="." instance=ExtResource("15_mwhad")]
-position = Vector2(-128, -192)
 text = ExtResource("16_t366l")
-size = Vector2(0.25, 0.25)
-
-[node name="Sprite2D2" parent="." instance=ExtResource("15_mwhad")]
-position = Vector2(128, -192)
-text = ExtResource("17_lc1kk")
-size = Vector2(0.2, 0.2)
-
-[node name="Sprite2D3" parent="." instance=ExtResource("15_mwhad")]
-position = Vector2(-320, -192)
-text = ExtResource("13_ijfyu")
-size = Vector2(0.3, 0.3)
-
-[node name="Sprite2D4" parent="." instance=ExtResource("15_mwhad")]
-position = Vector2(320, -192)
-text = ExtResource("19_8wyws")
-size = Vector2(0.2, 0.2)
+size = Vector2(0.1, 0.1)
 
 [connection signal="area_entered" from="Node2D/Kill" to="Node2D/Kill" method="_on_area_entered"]

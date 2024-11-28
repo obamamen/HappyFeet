@@ -3,6 +3,8 @@ extends Node2D
 
 var arrow = preload("res://Arrow.tscn")
 
+@export var Standard: Texture2D
+
 @export var timings: Array[float]
 var index: int = 0;
 
@@ -19,6 +21,7 @@ func spawn() -> void:
 	var instance = arrow.instantiate()
 	add_child(instance)
 	instance.global_rotation = global_rotation
+	instance.get_node("Sprite").texture = Standard
 
 
 func process(delta: float) -> void:

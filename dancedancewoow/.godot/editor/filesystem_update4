@@ -8,3 +8,5 @@ res://global.gd
 res://spawners.tscn
 res://spawners.gd
 res://animator.gd
+res://Text.gd
+res://sprite_2d.tscn

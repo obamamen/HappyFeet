@@ -22,7 +22,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	$Pressed.visible = false
 	$Standard.visible = true
-	print(Global.score)
+	
 	
 	PressedTime += delta
 	
@@ -36,8 +36,13 @@ func _process(delta: float) -> void:
 		var areas: Array[Area2D] = $".".get_overlapping_areas()
 		for area in areas:
 			area.queue_free()
-			Global.score += (maxTime - PressedTime) * 200
-			Global.score += 50 - global_position.distance_to(area.global_position)
+			var score = 0
+			score += (global_position.distance_to(area.global_position))
+			score = floor(score) * 20
+			score = clamp(score,0,600)
+			print(600 - score + 400)
+			
+			Global.score += (600 - score + 400)
 	pass
 
 
