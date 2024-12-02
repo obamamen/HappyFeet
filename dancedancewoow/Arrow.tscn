@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bepg5uxcp5qyo" path="res://Media/Arrows/tile003.png" id="2_mrcnc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5ia3j"]
-radius = 15.0
+radius = 20.0
 
 [node name="Arrow" type="Area2D"]
+scale = Vector2(1.2, 1.2)
 script = ExtResource("1_0i43s")
 
 [node name="Sprite" type="Sprite2D" parent="."]

@@ -26,14 +26,15 @@ func _process(delta: float) -> void:
 	
 	PressedTime += delta
 	
-	if Input.is_action_just_pressed(inputs[InputKey]):
-		PressedTime = 0
-	
-	
 	if (PressedTime < maxTime):
 		$Pressed.visible = true
 		$Standard.visible = false
+	
+	if Input.is_action_just_pressed(inputs[InputKey]):
+		PressedTime = 0
 		var areas: Array[Area2D] = $".".get_overlapping_areas()
+		if (areas.size() == 0):
+			Global.setHitType(Global.hitType.Miss,0.8)
 		for area in areas:
 			area.queue_free()
 			var score = 0
