@@ -14,4 +14,6 @@ func _process(delta: float) -> void:
 func _on_area_entered(area: Area2D) -> void:
 	area.queue_free()
 	Global.setHitType(Global.hitType.Miss,0.8)
+	Global.combo = 0
+	Global.heat -= 0.1
 	pass 

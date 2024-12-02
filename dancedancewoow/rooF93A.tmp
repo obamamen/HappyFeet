@@ -1,0 +1,617 @@
+[gd_scene load_steps=26 format=3 uid="uid://cj1vvl045l5i1"]
+
+[ext_resource type="Script" path="res://main_camera.gd" id="1_lytl4"]
+[ext_resource type="PackedScene" uid="uid://2kqb2fqan5nr" path="res://Input.tscn" id="1_qgp4d"]
+[ext_resource type="Texture2D" uid="uid://cghl6a0t0sd4p" path="res://Media/Arrows2/tile019.png" id="4_21208"]
+[ext_resource type="Texture2D" uid="uid://ckjxnwtr318hw" path="res://Media/Arrows2/tile023.png" id="5_hp7dt"]
+[ext_resource type="Texture2D" uid="uid://duoqk07ynybcm" path="res://Media/Arrows/tile005.png" id="7_mdqlr"]
+[ext_resource type="PackedScene" uid="uid://d1owipg7rfq76" path="res://spawners.tscn" id="8_dhxax"]
+[ext_resource type="Script" path="res://kill.gd" id="9_7vfmv"]
+[ext_resource type="Script" path="res://animator.gd" id="9_d2my3"]
+[ext_resource type="Texture2D" uid="uid://ot44mry57aig" path="res://Media/Arrows/tile010.png" id="9_pgjay"]
+[ext_resource type="Texture2D" uid="uid://cv721riwut5s8" path="res://Media/bgBottom.png" id="11_pm6sa"]
+[ext_resource type="Texture2D" uid="uid://dd3ccdbv527e0" path="res://Media/Arrows/tile015.png" id="11_r21b6"]
+[ext_resource type="PackedScene" uid="uid://et0epngchynn" path="res://sprite_2d.tscn" id="15_mwhad"]
+[ext_resource type="Texture2D" uid="uid://dhemqnkfb13ie" path="res://Media/Great-28-11-2024.png" id="16_t366l"]
+[ext_resource type="Texture2D" uid="uid://gpxrb3q2t2jq" path="res://Media/Nice-28-11-2024.png" id="17_lc1kk"]
+[ext_resource type="Texture2D" uid="uid://cokykhqyw2sjb" path="res://Media/Miss-28-11-2024.png" id="19_8wyws"]
+[ext_resource type="Texture2D" uid="uid://dwmyyr0a6ktkm" path="res://Media/star.png" id="19_og51o"]
+[ext_resource type="Script" path="res://star.gd" id="20_4337u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a216m"]
+size = Vector2(384, 153.25)
+
+[sub_resource type="Gradient" id="Gradient_bw6iu"]
+colors = PackedColorArray(0, 0, 0, 0, 0.53445, 0.46374, 0.66482, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mdinc"]
+gradient = SubResource("Gradient_bw6iu")
+
+[sub_resource type="Animation" id="Animation_imf3b"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_uq5as"]
+resource_name = "basicTest"
+length = 20.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/l")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11.0078, 11.5078, 12.0078, 12.5078, 13.0078, 13.5078, 14.0078, 14.5078, 15.0078, 15.5078, 16.0078, 16.5078, 17.0078, 17.5078, 18.0078, 18.5078, 19.0078, 19.5078),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/up")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11.0078, 11.5078, 12.0078, 12.5078, 13.0078, 13.5078, 14.0078, 14.5078, 15.0078, 15.5078, 16.0078, 16.5078, 17.0078, 17.5078, 18.0078, 18.5078, 19.0078, 19.5078),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11.0078, 11.5078, 12.0078, 12.5078, 13.0078, 13.5078, 14.0078, 14.5078, 15.0078, 15.5078, 16.0078, 16.5078, 17.0078, 17.5078, 18.0078, 18.5078, 19.0078, 19.5078),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dujm6"]
+_data = {
+"RESET": SubResource("Animation_imf3b"),
+"basicTest": SubResource("Animation_uq5as")
+}
+
+[sub_resource type="Gradient" id="Gradient_lx6uk"]
+colors = PackedColorArray(0.137255, 0.109804, 0.188235, 1, 0.167399, 0.135758, 0.226209, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n5cq0"]
+gradient = SubResource("Gradient_lx6uk")
+fill_from = Vector2(0, 1)
+
+[node name="Root" type="Node2D"]
+
+[node name="MainCamera" type="Camera2D" parent="."]
+zoom = Vector2(1.6, 1.6)
+script = ExtResource("1_lytl4")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, 64)
+
+[node name="InputUp" parent="Node2D" instance=ExtResource("1_qgp4d")]
+position = Vector2(-384, 192)
+rotation = -1.5708
+Standard = ExtResource("4_21208")
+Pressed = ExtResource("5_hp7dt")
+
+[node name="InputRight" parent="Node2D" instance=ExtResource("1_qgp4d")]
+position = Vector2(-256, 192)
+rotation = -0.00715079
+Standard = ExtResource("4_21208")
+Pressed = ExtResource("5_hp7dt")
+InputKey = 1
+
+[node name="InputLeft" parent="Node2D" instance=ExtResource("1_qgp4d")]
+position = Vector2(-512, 192)
+rotation = 3.14159
+Standard = ExtResource("4_21208")
+Pressed = ExtResource("5_hp7dt")
+InputKey = 2
+
+[node name="Kill" type="Area2D" parent="Node2D"]
+position = Vector2(0, 64)
+script = ExtResource("9_7vfmv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Kill"]
+position = Vector2(-384, 256)
+shape = SubResource("RectangleShape2D_a216m")
+debug_color = Color(0.987207, 0, 0.315499, 0.42)
+
+[node name="r" parent="Node2D" instance=ExtResource("8_dhxax")]
+position = Vector2(-256, -448)
+rotation = 1.5708
+Standard = ExtResource("7_mdqlr")
+timings = Array[float]([4.0, 0.4, 0.4, 0.2, 0.1])
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/r"]
+self_modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(192, -0.000701904)
+rotation = 3.14159
+scale = Vector2(1.40625, 32)
+texture = SubResource("GradientTexture1D_mdinc")
+
+[node name="up" parent="Node2D" instance=ExtResource("8_dhxax")]
+position = Vector2(-384, -448)
+rotation = 1.5708
+Standard = ExtResource("11_r21b6")
+timings = Array[float]([2.0, 2.0, 2.0, 1.0, 1.0, 0.2])
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/up"]
+self_modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(192, -0.000701904)
+rotation = 3.14159
+scale = Vector2(1.40625, 32)
+texture = SubResource("GradientTexture1D_mdinc")
+
+[node name="l" parent="Node2D" instance=ExtResource("8_dhxax")]
+position = Vector2(-512, -448)
+rotation = 1.5708
+Standard = ExtResource("9_pgjay")
+timings = Array[float]([0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.2, 0.2, 0.2, 0.2, 0.2])
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/l"]
+self_modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(192, -0.000701904)
+rotation = 3.14159
+scale = Vector2(1.40625, 32)
+texture = SubResource("GradientTexture1D_mdinc")
+
+[node name="animator" type="AnimationPlayer" parent="."]
+deterministic = true
+libraries = {
+"": SubResource("AnimationLibrary_dujm6")
+}
+script = ExtResource("9_d2my3")
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BgBottom" type="Sprite2D" parent="."]
+self_modulate = Color(0.262932, 0.262932, 0.262932, 1)
+z_index = -1
+scale = Vector2(2.09777, 2)
+texture = ExtResource("11_pm6sa")
+metadata/_edit_lock_ = true
+
+[node name="texts" type="Node2D" parent="."]
+position = Vector2(-64, 192)
+scale = Vector2(0.3, 0.3)
+
+[node name="Miss" parent="texts" instance=ExtResource("15_mwhad")]
+position = Vector2(1066.67, 2.03451e-05)
+scale = Vector2(0.833333, 0.833333)
+texture = ExtResource("19_8wyws")
+type = 4
+
+[node name="Nice" parent="texts" instance=ExtResource("15_mwhad")]
+position = Vector2(1706.67, -640)
+scale = Vector2(0.833333, 0.833333)
+texture = ExtResource("17_lc1kk")
+type = 1
+
+[node name="Perfect" parent="texts" instance=ExtResource("15_mwhad")]
+position = Vector2(1493.33, -1493.33)
+scale = Vector2(1.33333, 1.33333)
+type = 3
+
+[node name="Great" parent="texts" instance=ExtResource("15_mwhad")]
+position = Vector2(1706.67, -1066.67)
+scale = Vector2(1, 1)
+texture = ExtResource("16_t366l")
+type = 2
+
+[node name="stars" type="Node2D" parent="."]
+
+[node name="Star" type="Sprite2D" parent="stars"]
+top_level = true
+clip_children = 1
+z_index = -1
+position = Vector2(-192, 448)
+texture = ExtResource("19_og51o")
+script = ExtResource("20_4337u")
+speed = 12.0
+
+[node name="Sprite2D" type="Sprite2D" parent="stars/Star"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(1.14441e-05, 0)
+scale = Vector2(10, 10)
+texture = SubResource("GradientTexture2D_n5cq0")
+
+[node name="Star2" type="Sprite2D" parent="stars"]
+top_level = true
+clip_children = 1
+z_index = -1
+position = Vector2(0, -256)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_og51o")
+script = ExtResource("20_4337u")
+speed = 18.0
+
+[node name="Sprite2D" type="Sprite2D" parent="stars/Star2"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(0, -128)
+scale = Vector2(10, 10)
+texture = SubResource("GradientTexture2D_n5cq0")
+
+[node name="Star3" type="Sprite2D" parent="stars"]
+top_level = true
+clip_children = 1
+z_index = -1
+position = Vector2(448, 64)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("19_og51o")
+script = ExtResource("20_4337u")
+speed = 8.0
+
+[node name="Sprite2D" type="Sprite2D" parent="stars/Star3"]
+modulate = Color(1, 1, 1, 0.784314)
+scale = Vector2(10, 10)
+texture = SubResource("GradientTexture2D_n5cq0")
+
+[connection signal="area_entered" from="Node2D/Kill" to="Node2D/Kill" method="_on_area_entered"]

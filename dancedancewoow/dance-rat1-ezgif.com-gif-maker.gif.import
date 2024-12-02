@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://mmvdbg2uj5o6"
+path="res://.godot/imported/dance-rat1-ezgif.com-gif-maker.gif-2fe4d9b0ffbd0367f2c009bff3e7d879.tres"
+
+[deps]
+
+source_file="res://dance-rat1-ezgif.com-gif-maker.gif"
+dest_files=["res://.godot/imported/dance-rat1-ezgif.com-gif-maker.gif-2fe4d9b0ffbd0367f2c009bff3e7d879.tres"]
+
+[params]
+
+frames_per_second=30

@@ -3,4 +3,9 @@ res://Arrow.tscn
 res://Input.tscn
 res://spawners.tscn
 res://sprite_2d.tscn
-res://arrow.gd
+res://score.gd
+res://global.gd
+res://input.gd
+res://kill.gd
+res://root.gd
+res://heatMeter.gd

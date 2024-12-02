@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://diht6jml811tt"
+path="res://.godot/imported/cat-shocked.gif-179e425c5699179f67f166b4f96e0ef9.tres"
+
+[deps]
+
+source_file="res://Media/Arrows2/cat-shocked.gif"
+dest_files=["res://.godot/imported/cat-shocked.gif-179e425c5699179f67f166b4f96e0ef9.tres"]
+
+[params]
+
+frames_per_second=30

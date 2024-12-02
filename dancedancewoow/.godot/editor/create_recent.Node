@@ -1,8 +1,9 @@
+Panel
 Sprite2D
-ColorRect
+RichTextLabel
 Node2D
 AnimationPlayer
-RichTextLabel
+ColorRect
 Control
 Container
 CollisionShape2D

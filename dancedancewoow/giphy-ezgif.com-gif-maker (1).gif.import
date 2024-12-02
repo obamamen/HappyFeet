@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://cn2olwb2w7ugb"
+path="res://.godot/imported/giphy-ezgif.com-gif-maker (1).gif-e167446f6b3cb83e90eff9b06913bb0f.tres"
+
+[deps]
+
+source_file="res://giphy-ezgif.com-gif-maker (1).gif"
+dest_files=["res://.godot/imported/giphy-ezgif.com-gif-maker (1).gif-e167446f6b3cb83e90eff9b06913bb0f.tres"]
+
+[params]
+
+frames_per_second=30
