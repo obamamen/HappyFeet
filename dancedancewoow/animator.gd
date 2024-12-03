@@ -1,8 +1,9 @@
 extends AnimationPlayer
 
 
+
 func _ready() -> void:
-	play("basicTest")
+	play("Hardd1")
 	pass
 
 func _process(delta: float) -> void:

@@ -1,22 +1,24 @@
 8a531afeb0b2817bc0d00c64bb8f1a30
-::res://::1733147576
+::res://::1733151951
 animator.gd::GDScript::-1::1733143487::0::1::::<>AnimationPlayer<>::
 arrow.gd::GDScript::-1::1733130096::0::1::::<>Area2D<>::
-Arrow.tscn::PackedScene::7839682036541975071::1733147272::0::1::::<><>::res://arrow.gd<>uid://bepg5uxcp5qyo::::res://Media/Arrows/tile003.png
+Arrow.tscn::PackedScene::7839682036541975071::1733151772::0::1::::<><>::res://arrow.gd<>uid://bepg5uxcp5qyo::::res://Media/Arrows/tile003.png
 dance-rat1-ezgif.com-gif-maker.gif::SpriteFrames::868319133980965083::1733146706::1733146708::1::::<><>::
-giphy-ezgif.com-gif-maker (1).gif::SpriteFrames::5741905373987865885::1733147576::1733147576::1::::<><>::
-global.gd::GDScript::-1::1732791910::0::1::::<>Node<>::
+giphy-ezgif.com-gif-maker (1).gif::SpriteFrames::5741905373987865885::1733151951::1733147576::1::::<><>::
+global.gd::GDScript::-1::1733151334::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::2780556398229325278::1732699124::1732699131::1::::<><>::
-input.gd::GDScript::-1::1733145859::0::1::::<>Node2D<>::
-Input.tscn::PackedScene::1916717240027629291::1733147272::0::1::::<><>::res://input.gd
-kill.gd::GDScript::-1::1732792068::0::1::::<>Area2D<>::
+input.gd::GDScript::-1::1733150571::0::1::::<>Node2D<>::
+Input.tscn::PackedScene::1916717240027629291::1733151772::0::1::::<><>::res://input.gd
+kill.gd::GDScript::-1::1733150523::0::1::::<>Area2D<>::
 main.tres::Theme::2121896461404198084::1733143853::0::1::::<><>::
 main_camera.gd::GDScript::-1::1733143507::0::1::::<>Camera2D<>::
-root.tscn::PackedScene::5459527957989292986::1733147272::0::1::::<><>::res://main_camera.gd<>uid://2kqb2fqan5nr::::res://Input.tscn<>uid://cghl6a0t0sd4p::::res://Media/Arrows2/tile019.png<>uid://ckjxnwtr318hw::::res://Media/Arrows2/tile023.png<>uid://duoqk07ynybcm::::res://Media/Arrows/tile005.png<>uid://d1owipg7rfq76::::res://spawners.tscn<>res://kill.gd<>res://animator.gd<>uid://ot44mry57aig::::res://Media/Arrows/tile010.png<>uid://cv721riwut5s8::::res://Media/bgBottom.png<>uid://dd3ccdbv527e0::::res://Media/Arrows/tile015.png<>res://score.gd<>uid://buuwa8rkpq87u::::res://Media/Techno-tron.ttf<>uid://et0epngchynn::::res://sprite_2d.tscn<>uid://dhemqnkfb13ie::::res://Media/Great-28-11-2024.png<>uid://gpxrb3q2t2jq::::res://Media/Nice-28-11-2024.png<>uid://cokykhqyw2sjb::::res://Media/Miss-28-11-2024.png<>uid://dwmyyr0a6ktkm::::res://Media/star.png<>res://star.gd<>uid://mmvdbg2uj5o6::::res://dance-rat1-ezgif.com-gif-maker.gif
-score.gd::GDScript::-1::1733146365::0::1::::<>RichTextLabel<>::
+heatMeter.gd::GDScript::-1::1733151352::0::1::::<>RichTextLabel<>::
+root.gd::GDScript::-1::1733150116::0::1::::<>Node2D<>::
+root.tscn::PackedScene::5459527957989292986::1733151772::0::1::::<><>::res://root.gd<>res://main_camera.gd<>uid://2kqb2fqan5nr::::res://Input.tscn<>uid://cghl6a0t0sd4p::::res://Media/Arrows2/tile019.png<>uid://ckjxnwtr318hw::::res://Media/Arrows2/tile023.png<>uid://duoqk07ynybcm::::res://Media/Arrows/tile005.png<>uid://d1owipg7rfq76::::res://spawners.tscn<>res://kill.gd<>res://animator.gd<>uid://ot44mry57aig::::res://Media/Arrows/tile010.png<>uid://cv721riwut5s8::::res://Media/bgBottom.png<>uid://dd3ccdbv527e0::::res://Media/Arrows/tile015.png<>res://score.gd<>uid://buuwa8rkpq87u::::res://Media/Techno-tron.ttf<>res://heatMeter.gd<>uid://et0epngchynn::::res://sprite_2d.tscn<>uid://dhemqnkfb13ie::::res://Media/Great-28-11-2024.png<>uid://gpxrb3q2t2jq::::res://Media/Nice-28-11-2024.png<>uid://cokykhqyw2sjb::::res://Media/Miss-28-11-2024.png<>uid://dwmyyr0a6ktkm::::res://Media/star.png<>res://star.gd<>uid://cn2olwb2w7ugb::::res://giphy-ezgif.com-gif-maker (1).gif<>uid://mmvdbg2uj5o6::::res://dance-rat1-ezgif.com-gif-maker.gif
+score.gd::GDScript::-1::1733151352::0::1::::<>RichTextLabel<>::
 spawners.gd::GDScript::-1::1732786009::0::1::::<>Node2D<>::
-spawners.tscn::PackedScene::9014424133013029463::1733147272::0::1::::<><>::res://spawners.gd
-sprite_2d.tscn::PackedScene::321504428082344575::1733147272::0::1::::<><>::res://Text.gd<>uid://8obc55w60lx4::::res://Media/Perfect-28-11-2024.png
+spawners.tscn::PackedScene::9014424133013029463::1733151772::0::1::::<><>::res://spawners.gd
+sprite_2d.tscn::PackedScene::321504428082344575::1733151772::0::1::::<><>::res://Text.gd<>uid://8obc55w60lx4::::res://Media/Perfect-28-11-2024.png
 star.gd::GDScript::-1::1732793340::0::1::::<>Sprite2D<>::
 Text.gd::GDScript::-1::1732792779::0::1::::<>Sprite2D<>::
 ::res://godotgif/::1733146583
@@ -26,8 +28,9 @@ README.md::TextFile::-1::1733146583::0::1::::<><>::
 ::res://godotgif/bin/::1733146678
 ::res://godotgif/bin/godotgif.macos.template_debug.framework/::1733146583
 ::res://godotgif/bin/godotgif.macos.template_release.framework/::1733146583
-::res://Media/::1733143815
+::res://Media/::1733151984
 bgBottom.png::CompressedTexture2D::6314553867643492757::1732785240::1732785273::1::::<><>::
+discoball-ezgif.com-gif-maker.gif::SpriteFrames::8367824346699378378::1733151929::1733151988::1::::<><>::
 Great-28-11-2024.png::CompressedTexture2D::7659599342658608900::1732784997::1732785274::1::::<><>::
 Miss-28-11-2024.png::CompressedTexture2D::5777604415125950899::1732785146::1732785274::1::::<><>::
 Nice-28-11-2024.png::CompressedTexture2D::453525674010802806::1732785070::1732785274::1::::<><>::

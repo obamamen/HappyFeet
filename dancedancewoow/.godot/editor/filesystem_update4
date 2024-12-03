@@ -9,3 +9,7 @@ res://input.gd
 res://kill.gd
 res://root.gd
 res://heatMeter.gd
+res://Discoball.gd
+res://animator.gd
+res://arrow.gd
+res://highscore.gd

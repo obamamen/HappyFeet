@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://cj1vvl045l5i1"]
+[gd_scene load_steps=52 format=3 uid="uid://cj1vvl045l5i1"]
 
 [ext_resource type="Script" path="res://root.gd" id="1_ipfax"]
 [ext_resource type="Script" path="res://main_camera.gd" id="1_lytl4"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dd3ccdbv527e0" path="res://Media/Arrows/tile015.png" id="11_r21b6"]
 [ext_resource type="Script" path="res://score.gd" id="12_r1afd"]
 [ext_resource type="FontFile" uid="uid://buuwa8rkpq87u" path="res://Media/Techno-tron.ttf" id="12_u2u63"]
+[ext_resource type="Script" path="res://highscore.gd" id="14_4meid"]
 [ext_resource type="Script" path="res://heatMeter.gd" id="14_wk6wh"]
 [ext_resource type="PackedScene" uid="uid://et0epngchynn" path="res://sprite_2d.tscn" id="15_mwhad"]
 [ext_resource type="Texture2D" uid="uid://dhemqnkfb13ie" path="res://Media/Great-28-11-2024.png" id="16_t366l"]
@@ -23,6 +24,8 @@
 [ext_resource type="Script" path="res://star.gd" id="20_4337u"]
 [ext_resource type="SpriteFrames" uid="uid://cn2olwb2w7ugb" path="res://giphy-ezgif.com-gif-maker (1).gif" id="20_oerfo"]
 [ext_resource type="SpriteFrames" uid="uid://mmvdbg2uj5o6" path="res://dance-rat1-ezgif.com-gif-maker.gif" id="20_sj1wg"]
+[ext_resource type="SpriteFrames" uid="uid://drho3yfx3eusw" path="res://Media/discoball-ezgif.com-gif-maker.gif" id="24_7kirt"]
+[ext_resource type="Script" path="res://Discoball.gd" id="25_vflgf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a216m"]
 size = Vector2(384, 204.625)
@@ -61,6 +64,43 @@ colors = PackedColorArray(0.743603, 7.12335e-06, 0.491613, 1, 0.729211, 0.589861
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_4tjpo"]
 gradient = SubResource("Gradient_g3fsk")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kyv08"]
+bg_color = Color(0.14902, 0.121569, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3owd"]
+bg_color = Color(0.06417, 0.0522, 0.09, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+anti_aliasing_size = 7.138
+
+[sub_resource type="Gradient" id="Gradient_fg4xk"]
+offsets = PackedFloat32Array(0, 0.993976)
+colors = PackedColorArray(0.47648, 0.506194, 0.258793, 1, 0.902104, 0.91912, 0.891636, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iewov"]
+gradient = SubResource("Gradient_fg4xk")
+fill_from = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_2ldi8"]
+colors = PackedColorArray(0.974415, 0.594919, 0.469153, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ro5dc"]
+gradient = SubResource("Gradient_2ldi8")
+fill_from = Vector2(0, 0.559829)
+
+[sub_resource type="Gradient" id="Gradient_qg30j"]
+colors = PackedColorArray(0.866266, 0.543885, 0.429339, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7271r"]
+gradient = SubResource("Gradient_qg30j")
+fill_from = Vector2(0, 0.217949)
 
 [sub_resource type="Animation" id="Animation_imf3b"]
 length = 0.001
@@ -464,10 +504,208 @@ tracks/2/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_obm8j"]
+resource_name = "test1"
+length = 3.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/l")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"spawn"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/up")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"spawn"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_4jbxi"]
+resource_name = "Hardd1"
+length = 16.0
+step = 0.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/l")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 3, 4.5, 6, 7.5, 8, 9, 10.5, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/up")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 2.5, 3.5, 5, 6.5, 7.5, 8.5, 9.5, 10.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 5.5, 7, 8, 8.5, 10, 10.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 15.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"start"
+}, {
+"args": [],
+"method": &"end"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dujm6"]
 _data = {
+"Hardd1": SubResource("Animation_4jbxi"),
 "RESET": SubResource("Animation_imf3b"),
-"basicTest": SubResource("Animation_uq5as")
+"basicTest": SubResource("Animation_uq5as"),
+"test1": SubResource("Animation_obm8j")
 }
 
 [sub_resource type="Gradient" id="Gradient_lx6uk"]
@@ -483,6 +721,11 @@ script = ExtResource("1_ipfax")
 [node name="MainCamera" type="Camera2D" parent="."]
 zoom = Vector2(1.6, 1.6)
 script = ExtResource("1_lytl4")
+
+[node name="ResetCam" type="Camera2D" parent="."]
+position = Vector2(2048, 0)
+enabled = false
+zoom = Vector2(1.6, 1.6)
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(128, 64)
@@ -524,7 +767,7 @@ timings = Array[float]([4.0, 0.4, 0.4, 0.2, 0.1])
 
 [node name="Sprite2D6" type="Sprite2D" parent="Node2D/r"]
 self_modulate = Color(1, 1, 1, 0.392157)
-position = Vector2(192, -0.000701904)
+position = Vector2(256, -0.000925954)
 rotation = 3.14159
 scale = Vector2(1.40625, 32)
 texture = SubResource("GradientTexture1D_mdinc")
@@ -537,7 +780,7 @@ timings = Array[float]([2.0, 2.0, 2.0, 1.0, 1.0, 0.2])
 
 [node name="Sprite2D4" type="Sprite2D" parent="Node2D/up"]
 self_modulate = Color(1, 1, 1, 0.392157)
-position = Vector2(192, -0.000701904)
+position = Vector2(256, -0.000933583)
 rotation = 3.14159
 scale = Vector2(1.40625, 32)
 texture = SubResource("GradientTexture1D_mdinc")
@@ -550,7 +793,7 @@ timings = Array[float]([0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.2, 0.2, 0.2, 0.2, 0.2])
 
 [node name="Sprite2D5" type="Sprite2D" parent="Node2D/l"]
 self_modulate = Color(1, 1, 1, 0.392157)
-position = Vector2(192, -0.000701904)
+position = Vector2(256, -0.000933583)
 rotation = 3.14159
 scale = Vector2(1.40625, 32)
 texture = SubResource("GradientTexture1D_mdinc")
@@ -574,50 +817,137 @@ offset_left = -3.05176e-05
 offset_right = 64.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_wumvk")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Node2D/GUI"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D/GUI/Panel"]
 clip_children = 2
 layout_mode = 0
-offset_left = 512.0
-offset_top = 192.0
-offset_right = 1152.0
-offset_bottom = 256.0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 704.0
+offset_bottom = 128.0
 theme_override_fonts/normal_font = ExtResource("12_u2u63")
 theme_override_font_sizes/normal_font_size = 50
 text = "Score 256500000"
 script = ExtResource("12_r1afd")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/GUI/RichTextLabel"]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/GUI/Panel/RichTextLabel"]
 position = Vector2(96, 24)
 scale = Vector2(3, 0.75)
 texture = SubResource("GradientTexture2D_svmle")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Node2D/GUI/RichTextLabel"]
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/GUI/Panel/RichTextLabel"]
 position = Vector2(416, 16)
 scale = Vector2(7, 1.5)
 texture = SubResource("GradientTexture2D_box0d")
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Node2D/GUI"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Node2D/GUI/Panel"]
 clip_children = 2
 layout_mode = 0
-offset_left = 512.0
-offset_top = 256.0
-offset_right = 1152.0
-offset_bottom = 320.0
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 704.0
+offset_bottom = 192.0
 theme_override_fonts/normal_font = ExtResource("12_u2u63")
 theme_override_font_sizes/normal_font_size = 40
 text = "X 1.25"
 script = ExtResource("14_wk6wh")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/GUI/RichTextLabel2"]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/GUI/Panel/RichTextLabel2"]
 position = Vector2(134.5, -2.86102e-06)
 scale = Vector2(8.20313, 1.6875)
 texture = SubResource("GradientTexture2D_4tjpo")
+
+[node name="Panel2" type="Panel" parent="Node2D/GUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 12.8
+anchor_bottom = 16.0
+offset_left = 448.0
+offset_top = 832.0
+offset_right = 1216.0
+offset_bottom = 256.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kyv08")
+
+[node name="ResetScreen" type="Control" parent="Node2D/GUI"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2240.0
+offset_right = 2280.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Node2D/GUI/ResetScreen"]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 384.0
+offset_right = 1152.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s3owd")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Node2D/GUI/ResetScreen/Panel"]
+clip_children = 1
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 128.0
+theme_override_fonts/normal_font = ExtResource("12_u2u63")
+theme_override_font_sizes/normal_font_size = 30
+text = "Pres UP to start"
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/GUI/ResetScreen/Panel/RichTextLabel2"]
+position = Vector2(224, 16)
+scale = Vector2(9, 1.5)
+texture = SubResource("GradientTexture2D_iewov")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D/GUI/ResetScreen"]
+clip_children = 2
+offset_left = 576.0
+offset_top = 256.0
+offset_right = 1216.0
+offset_bottom = 320.0
+theme_override_fonts/normal_font = ExtResource("12_u2u63")
+theme_override_font_sizes/normal_font_size = 50
+text = "Score   256500000"
+script = ExtResource("12_r1afd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/GUI/ResetScreen/RichTextLabel"]
+position = Vector2(96, 24)
+scale = Vector2(3, 0.75)
+texture = SubResource("GradientTexture2D_svmle")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/GUI/ResetScreen/RichTextLabel"]
+position = Vector2(416, 16)
+scale = Vector2(7, 1.5)
+texture = SubResource("GradientTexture2D_box0d")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Node2D/GUI/ResetScreen"]
+clip_children = 1
+layout_mode = 0
+offset_left = 576.0
+offset_top = 320.0
+offset_right = 1344.0
+offset_bottom = 384.0
+theme_override_fonts/normal_font = ExtResource("12_u2u63")
+theme_override_font_sizes/normal_font_size = 50
+text = "hScore   25060000"
+script = ExtResource("14_4meid")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/GUI/ResetScreen/RichTextLabel2"]
+position = Vector2(160, 16)
+scale = Vector2(5, 1.5)
+texture = SubResource("GradientTexture2D_ro5dc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/GUI/ResetScreen/RichTextLabel2"]
+position = Vector2(512, 16)
+scale = Vector2(8, 1.5)
+texture = SubResource("GradientTexture2D_7271r")
 
 [node name="animator" type="AnimationPlayer" parent="."]
 deterministic = true
 libraries = {
 "": SubResource("AnimationLibrary_dujm6")
 }
+speed_scale = 2.0
 script = ExtResource("9_d2my3")
 
 [node name="BgBottom" type="Sprite2D" parent="."]
@@ -632,29 +962,30 @@ position = Vector2(-192, 320)
 scale = Vector2(0.3, 0.3)
 
 [node name="Miss" parent="texts" instance=ExtResource("15_mwhad")]
-position = Vector2(853.333, -640)
-scale = Vector2(1.15, 1.15)
+position = Vector2(853.333, -426.667)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("19_8wyws")
 type = 4
 
 [node name="Nice" parent="texts" instance=ExtResource("15_mwhad")]
-position = Vector2(1066.67, -1066.67)
-scale = Vector2(0.833333, 0.833333)
+position = Vector2(1280, -1280)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("17_lc1kk")
 type = 1
 
 [node name="Perfect" parent="texts" instance=ExtResource("15_mwhad")]
-position = Vector2(1280, -1920)
-scale = Vector2(1.6, 1.6)
+position = Vector2(853.333, -1706.67)
+scale = Vector2(1.2, 1.2)
 type = 3
 
 [node name="Great" parent="texts" instance=ExtResource("15_mwhad")]
-position = Vector2(1280, -1493.33)
-scale = Vector2(1.1, 1.1)
+position = Vector2(853.333, -853.333)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("16_t366l")
 type = 2
 
 [node name="stars" type="Node2D" parent="."]
+position = Vector2(57, 0)
 
 [node name="Star" type="Sprite2D" parent="stars"]
 top_level = true
@@ -709,23 +1040,38 @@ texture = SubResource("GradientTexture2D_n5cq0")
 metadata/_edit_lock_ = true
 
 [node name="Node2D2" type="Node2D" parent="."]
-position = Vector2(384, 128)
+position = Vector2(384, 64)
 scale = Vector2(1.26818, 1.26818)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Node2D2"]
-position = Vector2(0, 92.2581)
+position = Vector2(7.5699, 107.634)
 scale = Vector2(0.630824, 0.630825)
 sprite_frames = ExtResource("20_oerfo")
 animation = &"gif"
 autoplay = "gif"
+frame_progress = 0.617084
 speed_scale = 0.5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D2"]
-position = Vector2(-5.51971, -6.30824)
+position = Vector2(2.05018, 9.06809)
 sprite_frames = ExtResource("20_sj1wg")
 animation = &"gif"
 autoplay = "gif"
-frame_progress = 0.971436
+frame_progress = 0.204629
 speed_scale = 1.25
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Node2D2"]
+position = Vector2(18.1362, -212.903)
+scale = Vector2(0.78853, 0.788531)
+sprite_frames = ExtResource("24_7kirt")
+animation = &"gif"
+script = ExtResource("25_vflgf")
+
+[node name="BgBottom2" type="Sprite2D" parent="."]
+self_modulate = Color(0.262932, 0.262932, 0.262932, 1)
+z_index = -1
+position = Vector2(2048, 0)
+scale = Vector2(2.09777, 2)
+texture = ExtResource("11_pm6sa")
 
 [connection signal="area_entered" from="Node2D/Kill" to="Node2D/Kill" method="_on_area_entered"]

@@ -31,6 +31,6 @@ func _process(delta: float) -> void:
 	passedTime += delta
 	
 	if (passedTime > Global.textDelay):
-		text = "Score   " + formatInt(Global.score);
+		text = "Score    " + formatInt(Global.score);
 		passedTime = 0
 	pass

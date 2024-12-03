@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://drho3yfx3eusw"
+path="res://.godot/imported/discoball-ezgif.com-gif-maker.gif-e27ee830cb8d3502a7084ef1c9d71cca.tres"
+
+[deps]
+
+source_file="res://Media/discoball-ezgif.com-gif-maker.gif"
+dest_files=["res://.godot/imported/discoball-ezgif.com-gif-maker.gif-e27ee830cb8d3502a7084ef1c9d71cca.tres"]
+
+[params]
+
+frames_per_second=30

@@ -1,12 +1,12 @@
-Panel
 Sprite2D
 RichTextLabel
+Camera2D
+Panel
+Control
 Node2D
 AnimationPlayer
 ColorRect
-Control
 Container
 CollisionShape2D
 Area2D
 AnimatedSprite2D
-Camera2D
