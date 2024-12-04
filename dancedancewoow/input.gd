@@ -44,14 +44,13 @@ func _process(delta: float) -> void:
 			score += (global_position.distance_to(area.global_position))
 			score = floor(score) * 20
 			score = clamp(score,0,600)
-
 			Global.combo += 1
 			Global.score += (600 - score + 400) * Global.heat
-			if (distance < 12):
+			if (distance < 18):
 				Global.setHitType(Global.hitType.Perfect,0.4)
 				Global.heat += 0.14
 				$particle.emitting = true
-			elif (distance < 18):
+			elif (distance < 26):
 				Global.setHitType(Global.hitType.Great,0.8)
 				Global.heat += 0.10
 			elif (distance < 32):
@@ -62,7 +61,4 @@ func _process(delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-#/if (PressedTime < maxTime):
-	#	area.queue_free()
-	#	Global.score += (maxTime - PressedTime) * 100
 	pass 

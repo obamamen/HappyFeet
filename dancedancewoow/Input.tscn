@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dwmyyr0a6ktkm" path="res://Media/star.png" id="2_apb5d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7m41r"]
-radius = 20.0
+radius = 30.0
 
 [sub_resource type="Curve" id="Curve_ggfyk"]
 _data = [Vector2(0, 1), 0.0, -1.0, 0, 1, Vector2(1, 0), -1.0, 0.0, 1, 0]
