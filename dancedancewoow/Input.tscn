@@ -1,9 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://2kqb2fqan5nr"]
+[gd_scene load_steps=9 format=3 uid="uid://2kqb2fqan5nr"]
 
 [ext_resource type="Script" path="res://input.gd" id="1_m53jp"]
+[ext_resource type="Texture2D" uid="uid://dwmyyr0a6ktkm" path="res://Media/star.png" id="2_apb5d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7m41r"]
-radius = 15.0
+radius = 20.0
+
+[sub_resource type="Curve" id="Curve_ggfyk"]
+_data = [Vector2(0, 1), 0.0, -1.0, 0, 1, Vector2(1, 0), -1.0, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_il8fc"]
+curve = SubResource("Curve_ggfyk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_iynlm"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 32.0
+angle_max = 360.0
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_min = 400.0
+initial_velocity_max = 500.0
+angular_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.01
+scale_max = 0.02
+alpha_curve = SubResource("CurveTexture_il8fc")
+hue_variation_max = 0.99
+
+[sub_resource type="Gradient" id="Gradient_r2dmw"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0jskk"]
+gradient = SubResource("Gradient_r2dmw")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
 
 [node name="Area2D" type="Area2D"]
 scale = Vector2(1.2, 1.2)
@@ -23,5 +55,25 @@ offset_top = -15.0
 offset_right = 1344.0
 offset_bottom = 79.0
 scale = Vector2(1, 0.32)
+
+[node name="particle" type="GPUParticles2D" parent="."]
+clip_children = 1
+emitting = false
+amount = 25
+process_material = SubResource("ParticleProcessMaterial_iynlm")
+texture = ExtResource("2_apb5d")
+lifetime = 0.4
+one_shot = true
+explosiveness = 0.8
+fixed_fps = 0
+fract_delta = false
+visibility_rect = Rect2(0, 0, 0, 0)
+local_coords = true
+
+[node name="Sprite2D" type="Sprite2D" parent="particle"]
+clip_children = 1
+position = Vector2(-8.74995, -892.082)
+scale = Vector2(100, 980.008)
+texture = SubResource("GradientTexture2D_0jskk")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

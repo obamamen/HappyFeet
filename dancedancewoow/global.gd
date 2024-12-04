@@ -40,3 +40,14 @@ func _process(delta: float) -> void:
 	highScore = max(score, highScore)
 	if (currentHitTime > 0):
 		active = true
+		
+func formatInt(n: int) -> String:
+	var re = ""
+	var numstr = str(n)
+	var count = 0
+	for i in range(len(numstr) - 1, -1, -1):
+		re = numstr[i] + re
+		count += 1
+		if count % 3 == 0 and i != 0:  
+			re = " " + re
+	return re

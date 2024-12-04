@@ -1,4 +1,6 @@
 Sprite2D
+CPUParticles2D
+GPUParticles2D
 RichTextLabel
 Camera2D
 Panel

@@ -557,8 +557,8 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_4jbxi"]
 resource_name = "Hardd1"
-length = 16.0
-step = 0.5
+length = 56.0
+step = 1.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -566,9 +566,33 @@ tracks/0/path = NodePath("Node2D/l")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 3, 4.5, 6, 7.5, 8, 9, 10.5, 11),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(1, 2, 7, 9, 10, 13, 15, 22, 24, 27, 29, 31, 33, 37, 40, 45, 47, 51),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
 "args": [],
 "method": &"spawn"
 }, {
@@ -607,9 +631,30 @@ tracks/1/path = NodePath("Node2D/up")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2, 2.5, 3.5, 5, 6.5, 7.5, 8.5, 9.5, 10.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(4, 5, 8, 11, 17, 19, 21, 26, 30, 35, 36, 39, 41, 43, 46, 49, 53, 55),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
 "args": [],
 "method": &"spawn"
 }, {
@@ -651,9 +696,42 @@ tracks/2/path = NodePath("Node2D/r")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.5, 3.5, 5.5, 7, 8, 8.5, 10, 10.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 3, 6, 12, 14, 16, 18, 20, 23, 25, 28, 32, 34, 38, 42, 44, 48, 50, 52, 54),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
+"args": [],
+"method": &"spawn"
+}, {
 "args": [],
 "method": &"spawn"
 }, {
@@ -689,14 +767,11 @@ tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 15.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"start"
-}, {
-"args": [],
-"method": &"end"
 }]
 }
 
@@ -886,12 +961,12 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_s3owd")
 [node name="RichTextLabel2" type="RichTextLabel" parent="Node2D/GUI/ResetScreen/Panel"]
 clip_children = 1
 layout_mode = 0
-offset_left = 128.0
+offset_left = 64.0
 offset_top = 64.0
-offset_right = 448.0
+offset_right = 512.0
 offset_bottom = 128.0
 theme_override_fonts/normal_font = ExtResource("12_u2u63")
-theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/normal_font_size = 40
 text = "Pres UP to start"
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/GUI/ResetScreen/Panel/RichTextLabel2"]
@@ -901,6 +976,7 @@ texture = SubResource("GradientTexture2D_iewov")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node2D/GUI/ResetScreen"]
 clip_children = 2
+layout_mode = 0
 offset_left = 576.0
 offset_top = 256.0
 offset_right = 1216.0
@@ -947,7 +1023,6 @@ deterministic = true
 libraries = {
 "": SubResource("AnimationLibrary_dujm6")
 }
-speed_scale = 2.0
 script = ExtResource("9_d2my3")
 
 [node name="BgBottom" type="Sprite2D" parent="."]
@@ -963,7 +1038,7 @@ scale = Vector2(0.3, 0.3)
 
 [node name="Miss" parent="texts" instance=ExtResource("15_mwhad")]
 position = Vector2(853.333, -426.667)
-scale = Vector2(0.9, 0.9)
+scale = Vector2(1, 1)
 texture = ExtResource("19_8wyws")
 type = 4
 
@@ -1053,7 +1128,8 @@ frame_progress = 0.617084
 speed_scale = 0.5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D2"]
-position = Vector2(2.05018, 9.06809)
+position = Vector2(9.53674e-06, -1.90735e-06)
+scale = Vector2(1.17885, 1.14695)
 sprite_frames = ExtResource("20_sj1wg")
 animation = &"gif"
 autoplay = "gif"
@@ -1073,5 +1149,24 @@ z_index = -1
 position = Vector2(2048, 0)
 scale = Vector2(2.09777, 2)
 texture = ExtResource("11_pm6sa")
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BgBottom2"]
+position = Vector2(152.543, 96)
+scale = Vector2(0.5, 0.496)
+sprite_frames = ExtResource("20_sj1wg")
+animation = &"gif"
+autoplay = "gif"
+frame_progress = 0.204629
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="BgBottom2"]
+position = Vector2(-152.543, 96)
+scale = Vector2(0.5, 0.496)
+sprite_frames = ExtResource("20_sj1wg")
+animation = &"gif"
+autoplay = "gif"
+frame_progress = 0.204629
+flip_h = true
 
 [connection signal="area_entered" from="Node2D/Kill" to="Node2D/Kill" method="_on_area_entered"]
+[connection signal="animation_finished" from="animator" to="animator" method="_on_animation_finished"]
